@@ -21,10 +21,10 @@ const books = [
 const BookList = () => {
   return (
     <section className="booklist">
-      {books.map((book, index) => {
+      {books.map((book) => {
         console.log(book);
         const { author, title, img, id } = book;
-        return <Book img={img} title={title} author={author} key={index} />;
+        return <Book img={img} title={title} author={author} key={id} />;
       })}
     </section>
   );
