@@ -16,12 +16,6 @@ const books = [
   },
 ];
 
-const names = ["john", "peter", "susan"];
-
-const newNames = names.map((name) => {
-  return <h1>{name}</h1>;
-});
-
 const BookList = () => {
   return (
     <section className="booklist">
