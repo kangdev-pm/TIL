@@ -8,26 +8,23 @@ const books = [
     author: "나태주",
     title: "꽃을 보듯 너를 본다",
     img: "https://m.media-amazon.com/images/I/31+NaYSdQGL._SY342_.jpg",
+    id: 1,
   },
   {
     author: "김호연",
     title: "불편한 편의점",
     img: "https://m.media-amazon.com/images/I/71RHrARlaUL._SY342_.jpg",
+    id: 2,
   },
 ];
-
-const names = ["john", "peter", "susan"];
-
-const newNames = names.map((name) => {
-  return <h1>{name}</h1>;
-});
 
 const BookList = () => {
   return (
     <section className="booklist">
-      {books.map((book) => {
-        const { author, title, img } = book;
-        return <Book img={img} title={title} author={author} />;
+      {books.map((book, index) => {
+        console.log(book);
+        const { author, title, img, id } = book;
+        return <Book img={img} title={title} author={author} key={index} />;
       })}
     </section>
   );
